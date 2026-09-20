@@ -1,5 +1,5 @@
 baseURL = '/'
-title = 'kblog'
+title = 'Kantsy'
 locale = 'en-us'
 
 [markup]

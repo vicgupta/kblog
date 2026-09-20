@@ -1,6 +1,6 @@
 {
-  "name": "kblog-functions",
+  "name": "kantsy-functions",
   "private": true,
   "version": "1.0.0",
-  "description": "Netlify Functions for kblog writer API (no dependencies, Node 22 native fetch)"
+  "description": "Netlify Functions for Kantsy writer API (no dependencies, Node 22 native fetch)"
 }
