@@ -1,0 +1,14 @@
+[build]
+  command = "hugo --minify"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  HUGO_VERSION = "0.164.0"
+
+# Writer API: POST /api/posts -> function (function enforces Bearer token + method)
+[[redirects]]
+  from = "/api/posts"
+  to = "/.netlify/functions/create-post"
+  status = 200
+  force = true

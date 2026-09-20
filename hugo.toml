@@ -1,0 +1,11 @@
+baseURL = '/'
+title = 'kblog'
+locale = 'en-us'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  posts = '/posts/:slug/'

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  <time>{{ .Date.Format "2006-01-02" }}</time>
+  {{ with .Resources.GetMatch "cover.*" }}
+  {{ with .Resize "1200x" }}<img src="{{ .RelPermalink }}" alt="">{{ end }}
+  {{ end }}
+  <div>{{ .Content }}</div>
+</article>
+<p><a href="/">← All posts</a></p>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>Posts</h1>
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ if not $posts }}<p>No posts yet.</p>{{ end }}
+{{ range $posts.ByDate.Reverse }}
+<article>
+  <a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2></a>
+  <time>{{ .Date.Format "2006-01-02" }}</time>
+  {{ with .Resources.GetMatch "cover.*" }}
+  {{ with .Resize "600x" }}<a href="{{ $.RelPermalink }}"><img src="{{ .RelPermalink }}" alt="" loading="lazy"></a>{{ end }}
+  {{ end }}
+</article>
+{{ end }}
+{{ end }}
